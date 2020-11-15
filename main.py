@@ -37,89 +37,89 @@ else:
     # Checking and calculating the tax amount for one subject
     if sub_of_tax == 'one subject':
         if annual_income <= p.fir_st_fon:                        # Comparison annual income with first stage
-            tax_amount = annual_income * p.fir_st_tax            # Consider taxable amount for third stage
+            tax_amount = annual_income * p.fir_st_tax            # Calculate taxable amount for third stage
             print(p.TXT_TOTAl, tax_amount, '$', sep='')
         elif p.fir_st_fon < annual_income <= p.sec_st_fon:       # Comparison annual income with first and second stage
             tax_amount = (annual_income - p.fir_st_fon) \
-                     * p.sec_st_tax + p.fir_full_fon             # Consider taxable amount for second stage
+                     * p.sec_st_tax + p.fir_full_fon             # Calculate taxable amount for second stage
             print(p.TXT_TOTAl, tax_amount, '$', sep='')
         elif p.sec_st_fon < annual_income <= p.thi_st_fon:       # Comparison annual income with second and third stage
             tax_amount = (annual_income - p.sec_st_fon) \
-                     * p.thi_st_tax + p.sec_full_fon             # Consider taxable amount for third stage
+                     * p.thi_st_tax + p.sec_full_fon             # Calculate taxable amount for third stage
             print(p.TXT_TOTAl, tax_amount, '$', sep='')
         elif p.thi_st_fon < annual_income <= p.fou_st_fon:       # Comparison annual income with third and fourth stage
             tax_amount = (annual_income - p.thi_st_fon) \
-                     * p.fou_st_tax + p.thi_full_fon             # Consider taxable amount for fourth stage
+                     * p.fou_st_tax + p.thi_full_fon             # Calculate taxable amount for fourth stage
             print(p.TXT_TOTAl, tax_amount, '$', sep='')
         elif p.fou_st_fon < annual_income <= p.fif_st_fon:       # Comparison annual income with fourth and fifth stage
             tax_amount = (annual_income - p.fou_st_fon) \
-                     * p.fif_st_tax + p.fou_full_fon             # Consider taxable amount for fifth stage
+                     * p.fif_st_tax + p.fou_full_fon             # Calculate taxable amount for fifth stage
             print(p.TXT_TOTAl, tax_amount, '$', sep='')
         elif p.fif_st_fon < annual_income <= p.six_st_fon:       # Comparison annual income with fifth and sixth stage
             tax_amount = (annual_income - p.fif_st_fon) \
-                     * p.six_st_tax + p.fif_full_fon             # Consider taxable amount for sixth stage
+                     * p.six_st_tax + p.fif_full_fon             # Calculate taxable amount for sixth stage
             print(p.TXT_TOTAl, tax_amount, '$', sep='')
         elif annual_income > p.six_st_fon:                       # Comparison annual income with seventh stage
             tax_amount = (annual_income - p.six_st_fon) \
-                     * p.sev_st_tax + p.six_full_fon             # Consider taxable amount for seventh stage
+                     * p.sev_st_tax + p.six_full_fon             # Calculate taxable amount for seventh stage
             print(p.TXT_TOTAl, tax_amount, '$', sep='')
 
     # Checking and calculating the tax amount for married couple
     elif sub_of_tax == 'married couple':
         if annual_income <= p.fir_st_fmar:                       # Comparison annual income with first stage
-            tax_amount = annual_income * p.fir_st_tax            # Consider taxable amount for third stage
+            tax_amount = annual_income * p.fir_st_tax            # Calculate taxable amount for third stage
             print(p.TXT_TOTAl, tax_amount, '$', sep='')
         elif p.fir_st_fmar < annual_income <= p.sec_st_fmar:     # Comparison annual income with first and second stage
             tax_amount = (annual_income - p.fir_st_fmar) \
-                     * p.sec_st_tax + p.fir_full_fmar            # Consider taxable amount for second stage
+                     * p.sec_st_tax + p.fir_full_fmar            # Calculate taxable amount for second stage
             print(p.TXT_TOTAl, tax_amount, '$', sep='')
         elif p.sec_st_fmar < annual_income <= p.thi_st_fmar:     # Comparison annual income with second and third stage
             tax_amount = (annual_income - p.sec_st_fmar) \
-                     * p.thi_st_tax + p.sec_full_fmar            # Consider taxable amount for third stage
+                     * p.thi_st_tax + p.sec_full_fmar            # Calculate taxable amount for third stage
             print(p.TXT_TOTAl, tax_amount, '$', sep='')
         elif p.thi_st_fmar < annual_income <= p.fou_st_fmar:     # Comparison annual income with third and fourth stage
             tax_amount = (annual_income - p.thi_st_fmar) \
-                     * p.fou_st_tax + p.thi_full_fmar            # Consider taxable amount for fourth stage
+                     * p.fou_st_tax + p.thi_full_fmar            # Calculate taxable amount for fourth stage
             print(p.TXT_TOTAl, tax_amount, '$', sep='')
         elif p.fou_st_fmar < annual_income <= p.fif_st_fmar:     # Comparison annual income with fourth and fifth stage
             tax_amount = (annual_income - p.fou_st_fon) \
-                     * p.fif_st_tax + p.fou_full_fmar            # Consider taxable amount for fifth stage
+                     * p.fif_st_tax + p.fou_full_fmar            # Calculate taxable amount for fifth stage
             print(p.TXT_TOTAl, tax_amount, '$', sep='')
         elif p.fif_st_fmar < annual_income <= p.six_st_fmar:     # Comparison annual income with fifth and sixth stage
             tax_amount = (annual_income - p.fif_st_fmar) \
-                     * p.six_st_tax + p.fif_full_fmar            # Consider taxable amount for sixth stage
+                     * p.six_st_tax + p.fif_full_fmar            # Calculate taxable amount for sixth stage
             print(p.TXT_TOTAl, tax_amount, '$', sep='')
         elif annual_income > p.six_st_fmar:                      # Comparison annual income with seventh stage
             tax_amount = (annual_income - p.six_st_fmar) \
-                     * p.sev_st_tax + p.six_full_fmar            # Consider taxable amount for seventh stage
+                     * p.sev_st_tax + p.six_full_fmar            # Calculate taxable amount for seventh stage
             print(p.TXT_TOTAl, tax_amount, '$', sep='')
 
     # Checking and calculating the tax amount for single parent
     elif sub_of_tax == 'single parent':
         if annual_income <= p.fir_st_fsg:                        # Comparison annual income with first stage
-            tax_amount = annual_income * p.fir_st_tax            # Consider taxable amount for third stage
+            tax_amount = annual_income * p.fir_st_tax            # Calculate taxable amount for third stage
             print(p.TXT_TOTAl, tax_amount, '$', sep='')
         elif p.fir_st_fsg < annual_income <= p.sec_st_fsg:       # Comparison annual income with first and second stage
             tax_amount = (annual_income - p.fir_st_fsg) \
-                     * p.sec_st_tax + p.fir_full_fsg             # Consider taxable amount for second stage
+                     * p.sec_st_tax + p.fir_full_fsg             # Calculate taxable amount for second stage
             print(p.TXT_TOTAl, tax_amount, '$', sep='')
         elif p.sec_st_fsg < annual_income <= p.thi_st_fsg:       # Comparison annual income with second and third stage
             tax_amount = (annual_income - p.sec_st_fsg) \
-                     * p.thi_st_tax + p.sec_full_fsg             # Consider taxable amount for third stage
+                     * p.thi_st_tax + p.sec_full_fsg             # Calculate taxable amount for third stage
             print(p.TXT_TOTAl, tax_amount, '$', sep='')
         elif p.thi_st_fsg < annual_income <= p.fou_st_fsg:       # Comparison annual income with third and fourth stage
             tax_amount = (annual_income - p.thi_st_fon) \
-                     * p.fou_st_tax + p.thi_full_fsg             # Consider taxable amount for fourth stage
+                     * p.fou_st_tax + p.thi_full_fsg             # Calculate taxable amount for fourth stage
             print(p.TXT_TOTAl, tax_amount, '$', sep='')
         elif p.fou_st_fsg < annual_income <= p.fif_st_fon:       # Comparison annual income with fourth and fifth stage
             tax_amount = (annual_income - p.fou_st_fsg) \
-                     * p.fif_st_tax + p.fou_full_sg              # Consider taxable amount for fifth stage
+                     * p.fif_st_tax + p.fou_full_sg              # Calculate taxable amount for fifth stage
             print(p.TXT_TOTAl, tax_amount, '$', sep='')
         elif p.fif_st_fsg < annual_income <= p.six_st_fsg:       # Comparison annual income with fifth and sixth stage
             tax_amount = (annual_income - p.fif_st_fsg) \
-                     * p.six_st_tax + p.fif_full_sg              # Consider taxable amount for sixth stage
+                     * p.six_st_tax + p.fif_full_sg              # Calculate taxable amount for sixth stage
             print(p.TXT_TOTAl, tax_amount, '$', sep='')
         elif annual_income > p.six_st_fsg:                       # Comparison annual income with seventh stage
             tax_amount = (annual_income - p.six_st_fsg) \
-                     * p.sev_st_tax + p.six_full_sg              # Consider taxable amount for seventh stage
+                     * p.sev_st_tax + p.six_full_sg              # Calculate taxable amount for seventh stage
             print(p.TXT_TOTAl, tax_amount, '$', sep='')
